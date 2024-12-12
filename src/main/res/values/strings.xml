@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Gretting</string>
+    <string name="app_name">My Application Name</string>
+    <string-array name="font_families">
+        <item>sans-serif</item>
+        <item>serif</item>
+        <item>monospace</item>
+        <item>cursive</item>
+        <item>fantasy</item>
+    </string-array>
 </resources>

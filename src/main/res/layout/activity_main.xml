@@ -5,84 +5,80 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light"
     tools:context=".MainActivity">
 
-    <
     <TextView
-        android:id="@+id/textTop"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text=" \t              Hello Everyone
-         \n     Welcome to my application "
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"
+        android:text="Hello World!"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Button to interact with -->
-    <Button
-        android:id="@+id/buttonAction"
-        android:layout_width="wrap_content"
+    <SeekBar
+        android:id="@+id/seekBarFontSize"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Click Me!"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@android:color/holo_green_dark"
-        app:layout_constraintTop_toBottomOf="@id/textTop"
+        android:max="100"
+        android:progress="18"
+        app:layout_constraintTop_toBottomOf="@id/textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
-        android:padding="16dp" />
+        android:layout_marginTop="32dp" />
 
-    <!-- TextView for 'Created By Tushar Shinde' -->
 
-    <!-- TextView for additional message -->
-
-    <TextView
-        android:id="@+id/textBottom"
-        android:layout_width="380dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="56dp"
-        android:text="Created By Tushar Shinde"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textMessage"
+    <LinearLayout
+        android:id="@+id/colorButtonsLayout"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Press the button!"
-        android:textSize="18sp"
-        android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/buttonAction"
+        app:layout_constraintTop_toBottomOf="@id/seekBarFontSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
-        android:padding="8dp"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:gravity="center" />
+        android:layout_marginTop="32dp"
+        android:gravity="center">
 
-    <TextView
-        android:id="@+id/noteBlock"
+        <Button
+            android:id="@+id/btnColorRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Red"
+            android:backgroundTint="#FF0000"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnColorGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Green"
+            android:backgroundTint="#00FF00"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnColorBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Blue"
+            android:backgroundTint="#0000FF"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+
+    <Spinner
+        android:id="@+id/spinnerFontFamily"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Note Information:\n\nDate: 2015-09-01\nHour: 08:30\nTo: Tove\nFrom: Jani\nBody: Don't forget me this weekend!"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/textMessage"
+        app:layout_constraintTop_toBottomOf="@id/colorButtonsLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
-        android:padding="16dp"
-        android:background="@android:color/holo_blue_dark"
-        android:gravity="center" />
-
+        android:layout_marginTop="32dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
